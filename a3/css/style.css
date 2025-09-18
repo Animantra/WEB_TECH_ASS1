@@ -1,0 +1,143 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    align-items: center;
+    background-color: blue;
+    padding: 15px 100px;
+}
+
+
+nav {
+    display: flex;
+    gap: 100px;
+    font-size: 1.5rem;
+}
+
+.logo img{
+    height: 100px;
+    width: auto;
+
+}
+
+.card_cont{
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    gap: 50px;
+
+}
+
+.card{
+    display: flex;
+    flex:1;
+    max-width: 300px;
+    min-height: 300px;
+    box-shadow: 3px 3px 3px 3px #DAA520;
+    transition: transform 0.3s , box-shadow 0.3s;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px 10px #DAA520;
+
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+
+.card img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text button{
+    margin-top: auto;
+    border-radius: 10px;
+
+}
+
+
+
+.parent-container{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: auto 1fr auto ;
+    grid-template-areas: "header-grid header-grid"
+    "side-bar main-content"
+    "footer footer" ;
+}
+
+.header-grid{
+    display: flex;
+    grid-area: header-grid;
+
+}
+
+.side-bar{
+    display: flex;
+    grid-area: side-bar;
+}
+
+.main-content{
+    display: flex;
+    grid-area: main-content;
+
+}
+
+.footer{
+    display: flex;
+    grid-area: footer;
+
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:100px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.gallery-container img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.g-item{
+    position: relative;
+
+}
+
+.text{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.g-item:hover .text{
+    opacity:1;
+}
